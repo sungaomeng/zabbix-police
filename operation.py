@@ -5,16 +5,22 @@ import logging
 
 from dbread import *
 from modconf import *
+from send_wechat import *
+from send_email import *
+from send_sms import *
 
 a = getConfig('log')
 logging.basicConfig(filename=a['logfile'], encoding="utf-8", filemode="a",
                     format="%(asctime)s %(name)s:%(levelname)s:%(message)s", datefmt="%Y-%m-%d %H:%M:%S",
                     level=logging.DEBUG)
 
+
 def mergeproblem(originallist):
-    """ 告警合并 """
-    
-    
+    """ 告警信息合并
+        将不同triggerkey的报警放到List不同的下标里
+        举例子: [[{A主机的SSH报警},{B主机的SSH报警}],[{A主机的ICMP报警},{B主机的ICMP报警}]]
+    """
+
     problemlist = []
     # normalist = []
     Unknown = []
@@ -44,7 +50,7 @@ def mergeproblem(originallist):
 
 
 def mergenormal(originallist):
-    """ 恢复合并 """
+    """ 恢复信息合并 """
 
     normallist = []
     Unknown = []
@@ -71,7 +77,10 @@ def mergenormal(originallist):
 
 
 def compressproblem(alarminfo):
-    """ 告警压缩 """
+    """ 告警信息压缩
+        将相同triggerkey的报警消息合并为一条并增加发送类型和收件人
+        举例子: [['告警脚本名字','收件人','主题:A+B主机的SSH报警','内容:A+B主机的SSH报警'],['告警脚本名字','收件人','主题:A+B主机的ICMP报警','内容:A+B主机的ICMP报警']]
+    """
 
     currenttime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     messagelist = []
@@ -80,6 +89,7 @@ def compressproblem(alarminfo):
         hostgroup = []
         eventidlist = []
         actionlist = []
+        subjectlist = []
         eventtime = info[0]['eventtime']
         triggerstatus = info[0]['triggerstatus']
         triggerseverity = info[0]['triggerseverity']
@@ -112,8 +122,12 @@ def compressproblem(alarminfo):
             action = host['action']
             actionlist.append(action)
 
-        # 根据eventidlist查询告警接收人和mediatypeid
-        alert_receivera = alert_receiver(eventidlist, triggerkey)
+            # 获取subject列表
+            subject = host['subject']
+            subjectlist.append(subject)
+
+        # 根据subjectlist查询告警接收人和mediatypeid
+        alert_receivera = alert_receiver(subjectlist, triggerkey)
 
         # 查询media_type然后定义告警信息及收件人/收件类型
         # EMAIL test@qq.com
@@ -139,14 +153,18 @@ def compressproblem(alarminfo):
                     receiverlist.append(b[1])
                     continue
 
+            # 如果收件人为空则不执行下面的代码
+            if (len(receiverlist)) == 0:
+                continue
+
             messageinfo.append(actions)
             messageinfo.append(receiverlist)
             receiverlisttwo.append(receiverlist)
             receiverlist = []
 
-            # 如果收件人为空则不执行下面的代码
-            if (len(messageinfo[1])) == 0:
-                continue
+            # # 如果收件人为空则不执行下面的代码
+            # if (len(messageinfo[1])) == 0:
+            #     continue
 
             if infonum == 1:
                 if messageinfo[0] == 'SMS':
@@ -157,12 +175,17 @@ def compressproblem(alarminfo):
                     messageinfo = []
                 else:
                     subject = "故障%s,告警等级:%s,服务器:%s发生:%s故障!" % (triggerstatus, triggerseverity, hoststr, triggername)
-                    message = "告警主机:%s\n告警等级:%s\n告警信息:%s\n告警项目:%s\n当前状态:%s " \
-                              "%s\n故障持续:%s\n告警时间:%s\n分析时间:%s\n事件ID:%s\nActions:%s" % (
-                                hoststr, triggerseverity, triggername, triggerkey, triggerstatus, itemvalue,
-                                  eventage,
-                                  eventtime,
-                                  currenttime, eventidstr, actionstr)
+
+                    message = "告警主机 : " + hoststr + \
+                              "\n告警等级 : " + triggerseverity + \
+                              "\n告警项目 : " + triggername + \
+                              "\n监控配置 : " + triggerkey + \
+                              "\n当前状态 : " + triggerstatus + ", " + itemvalue + \
+                              "\n告警时间 : " + eventtime + \
+                              "\n分析时间 : " + currenttime + \
+                              "\n事件ID : " + eventidstr + \
+                              "\nActions : " + actionstr
+
                     messageinfo.append(subject)
                     messageinfo.append(message)
                     messagelist.append(messageinfo)
@@ -171,30 +194,41 @@ def compressproblem(alarminfo):
             elif infonum > 1:
                 if messageinfo[0] == 'SMS':
                     message = "故障%s:%s服务器组:%s共%s台服务器在%s发生:%s故障!详情见邮件" % (
-                        triggerstatus, triggerseverity, hostgroupstr, str(infonum), eventtime.split(' ')[1], triggername)
+                        triggerstatus, triggerseverity, hostgroupstr, str(infonum), eventtime.split(' ')[1],
+                        triggername)
+
                     messageinfo.append(message)
                     messagelist.append(messageinfo)
                     messageinfo = []
                 else:
-                    subject = "故障%s,告警等级:%s服务器组:%s共%s台服务器发生:%s故障!" % (
-                        triggerstatus, triggerseverity, hostgroupstr, str(infonum), triggername)
-                    message = "共%s台服务器故障!\n涉及服务器组:%s\n涉及服务器:%s\n告警等级:%s\n告警信息:%s\n告警项目:%s\n当前状态:%s " \
-                              "%s\n故障持续:%s\n告警时间:%s\n分析时间:%s\n事件ID:%s\nActions:%s" % (
-                                  str(infonum), hostgroupstr, hoststr, triggerseverity, triggername, triggerkey,
-                                  triggerstatus,
-                                  itemvalue, eventage, eventtime, currenttime, eventidstr, actionstr)
+                    subject = "故障%s,告警等级:%s服务器组:%s共%s台服务器发生:%s故障! %s条相同告警被压缩!" % (
+                        triggerstatus, triggerseverity, hostgroupstr, str(infonum), triggername, str(infonum))
+
+                    message = "共" + str(infonum) + "条相同告警被压缩!" + "共" + str(infonum) + "台服务器故障!" \
+                              "\n告警等级 : " + triggerseverity + \
+                              "\n告警项目 : " + triggername + \
+                              "\n监控配置 : " + triggerkey + \
+                              "\n当前状态 : " + triggerstatus + ", " + itemvalue + \
+                              "\n涉及主机组 : " + hostgroupstr + \
+                              "\n涉及主机器 : " + hoststr + \
+                              "\n告警时间 : " + eventtime + \
+                              "\n分析时间 : " + currenttime + \
+                              "\n事件ID : " + eventidstr + \
+                              "\nActions : " + actionstr
+
                     messageinfo.append(subject)
                     messageinfo.append(message)
                     messagelist.append(messageinfo)
                     messageinfo = []
 
         # 将合并细节打印到日志中
-        logging.info("Eventid:'%s', triggervalue:1, host:%s, triggerkey:'%s', actions:%s, receiverlist:%s" % (eventidstr, hoststr, triggerkey, actionstr, receiverlisttwo))
+        logging.info("compresslog, Eventid:'%s', triggervalue:1, hostgroup:%s, host:%s, triggerkey:'%s', actions:%s, receiverlist:%s" % (
+            eventidstr, hostgroupstr, hoststr, triggerkey, actionstr, receiverlisttwo))
     return messagelist
 
 
 def compressnormal(alarminfo):
-    """ 恢复压缩 """
+    """ 恢复信息压缩 """
 
     currenttime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     messagelist = []
@@ -203,6 +237,8 @@ def compressnormal(alarminfo):
         hostgroup = []
         eventidlist = []
         actionlist = []
+        subjectlist = []
+        triggerseverity = info[0]['triggerseverity']
         triggerstatus = info[0]['triggerstatus']
         triggername = info[0]['triggername']
         eventage = info[0]['eventage']
@@ -221,7 +257,10 @@ def compressnormal(alarminfo):
             action = host['action']
             actionlist.append(action)
 
-        alert_receivera = alert_receiver(eventidlist, triggerkey)
+            subject = host['subject']
+            subjectlist.append(subject)
+
+        alert_receivera = alert_receiver(subjectlist, triggerkey)
 
         messageinfo = []
         media_type_list = mediatype()
@@ -240,31 +279,71 @@ def compressnormal(alarminfo):
                     receiverlist.append(b[1])
                     continue
 
+            if (len(receiverlist)) == 0:
+                continue
+
             messageinfo.append(actions)
             messageinfo.append(receiverlist)
             receiverlisttwo.append(receiverlist)
             receiverlist = []
 
-            if (len(messageinfo[1])) == 0:
-                continue
-
             if infonum == 1:
-                subject = "恢复%s,服务器:%s:%s已恢复! 故障持续%s" % (triggerstatus, hoststr, triggername, eventage)
-                message = "恢复%s,服务器:%s:%s已恢复! 故障持续%s,分析时间:%s" % (
-                    triggerstatus, hoststr, triggername, eventage, currenttime)
-                messageinfo.append(subject)
-                messageinfo.append(message)
-                messagelist.append(messageinfo)
-                messageinfo = []
-            elif infonum > 1:
-                subject = "恢复%s,服务器组:%s共%s台服务器%s已恢复! 故障持续%s" % (
-                    triggerstatus, hostgroupstr, str(infonum), triggername, eventage)
-                message = "恢复%s,服务器组:%s共%s台服务器%s已恢复! 故障持续%s,分析时间:%s" % (
-                    triggerstatus, hostgroupstr, str(infonum), triggername, eventage, currenttime)
+                subject = "恢复%s, 故障持续%s,服务器:%s:%s已恢复!" % (triggerstatus, eventage, hoststr, triggername)
+
+                message = "恢复%s, 故障持续%s\n服务器:%s:%s已恢复!\n告警等级:%s\n分析时间:%s" % (
+                    triggerstatus, eventage, hoststr, triggername, triggerseverity, currenttime)
+
                 messageinfo.append(subject)
                 messageinfo.append(message)
                 messagelist.append(messageinfo)
                 messageinfo = []
 
-        logging.info("Eventid:'%s', triggervalue:0, host:%s, triggerkey:'%s', actions:%s, receiverlist:%s" % (eventidstr, hoststr, triggerkey, actionstr, receiverlisttwo))
+            elif infonum > 1:
+                subject = "恢复%s, 故障持续%s,服务器组:%s共%s台服务器%s已恢复!共%s条相同恢复信息被压缩!" % (
+                    triggerstatus, eventage, hostgroupstr, str(infonum), triggername, str(infonum))
+
+                message = "恢复" + triggerstatus + ",故障持续" + eventage + \
+                          "\n服务器组 : " + hostgroupstr + "共" + str(infonum) + "台服务器" + triggername + "已恢复!" + \
+                          "\n涉及服务器 : " + hoststr + \
+                          "\n告警等级 : " + triggerseverity + \
+                          "\n分析时间 : " + currenttime + \
+                          "\n共" + str(infonum) + "条相同恢复信息被压缩!"
+
+                messageinfo.append(subject)
+                messageinfo.append(message)
+                messagelist.append(messageinfo)
+                messageinfo = []
+
+        logging.info("compresslog, Eventid:'%s', triggervalue:0, hostgroup:%s, host:%s, triggerkey:'%s', actions:%s, receiverlist:%s" % (
+            eventidstr, hostgroupstr, hoststr, triggerkey, actionstr, receiverlisttwo))
+
     return messagelist
+
+
+def sendalarmmessage(messagelist):
+    """ 根据media_type定义的告警脚本名称分别发送给对应的人 """
+
+
+    if len(messagelist) != 0:
+        for content in messagelist:
+            if content[0] == 'WECHAT':
+                tos = content[1]
+                message = content[2] + '\n' + content[3]
+                a = WeChat('https://qyapi.weixin.qq.com/cgi-bin')
+                a.SendWechatMessage(tos, message)
+                logging.info("media_type: %s, tos: %s, message: %s" % (content[0], tos, message.replace("\n", ', ')))
+
+            if content[0] == 'EMAIL':
+                tos = content[1]
+                subject = content[2]
+                message = content[3]
+                SendEmailMessage(tos, subject, message)
+                logging.info(
+                    "alertlog, media_type: %s, tos: %s, message: %s" % (content[0], tos, message.replace("\n", ', ')))
+
+            if content[0] == 'SMS':
+                tos = ",".join(str(i) for i in content[1])
+                message = content[2]
+                SendSmsMessage(tos, message)
+                logging.info(
+                    "alertlog, media_type: %s, tos: %s, message: %s" % (content[0], tos, message.replace("\n", ', ')))

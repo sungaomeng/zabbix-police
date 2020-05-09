@@ -28,6 +28,7 @@ def alerts_eventid(event_id):
         # 相同的eventid只取一条
         event = data[0]
         messagelist = []
+        subject = event[7]
         # 只获取subject列的数据
         message = event[8]
         # 以"\r\n"为间隔切分数据
@@ -35,6 +36,7 @@ def alerts_eventid(event_id):
         for i in messageone:
             # 以|为分隔符切分keyvaule
             messagelist.append(i.split('|'))
+        messagelist.append(['subject',subject])
         messagedict = dict(messagelist)
         return messagedict
     except MySQLdb.Error, e:
@@ -59,24 +61,6 @@ def mediatype():
         print "Mysql Error %d: %s" % (e.args[0], e.args[1])
 
 
-def alerts_sedto(event_id):
-    """查询收件人"""
-
-    a = getConfig('mysql')
-    try:
-        conn = MySQLdb.connect(host=a['mysqlhost'], user=a['mysqluser'], passwd=a['mysqlpassword'], db=a['mysqldb'], port=int(a['mysqlport']))
-        cursor = conn.cursor()
-        cursor.execute("SET NAMES utf8");
-        sql = "SELECT * FROM alerts where subject in '%s' ;" % (event_id)
-        cursor.execute(sql)
-        data = cursor.fetchall()
-        cursor.close()
-        conn.close()
-        return data
-    except MySQLdb.Error, e:
-        print "Mysql Error %d: %s" % (e.args[0], e.args[1])
-
-
 def alert_receiver(event_id, triggerkey):
     """ 查询告警接收人 """
 
@@ -86,8 +70,8 @@ def alert_receiver(event_id, triggerkey):
         conn = MySQLdb.connect(host=a['mysqlhost'], user=a['mysqluser'], passwd=a['mysqlpassword'], db=a['mysqldb'], port=int(a['mysqlport']))
         cursor = conn.cursor()
         cursor.execute("SET NAMES utf8");
-        sql = "SELECT distinct mediatypeid,sendto FROM alerts where subject in (%s) and message like '%%%s%%' ;" % (
-            (','.join(event_id)), triggerkey)
+        sql = "SELECT distinct mediatypeid,sendto FROM alerts where subject in ('%s') and message like '%%%s%%' ;" % (
+            ('\',\''.join(event_id)), triggerkey.replace('\\', '\\\\\\\\'))
         cursor.execute(sql)
         data = cursor.fetchall()
         cursor.close()
@@ -109,7 +93,7 @@ def get_redis():
     eventidlist = r.keys()
     for i in eventidlist:
         print "redis keys = ", i
-        # r.delete(i)
+        r.delete(i)
         # r.flushdb()
 
     return eventidlist

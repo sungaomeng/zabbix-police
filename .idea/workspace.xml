@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98b8f9f8-91ea-459f-b545-60c7e5196055" name="Default" comment="" />
+    <list default="true" id="98b8f9f8-91ea-459f-b545-60c7e5196055" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allpolice.py" afterPath="$PROJECT_DIR$/allpolice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbread.py" afterPath="$PROJECT_DIR$/dbread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operation.py" afterPath="$PROJECT_DIR$/operation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/police.conf" afterPath="$PROJECT_DIR$/police.conf" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,9 +20,10 @@
     <SUITE FILE_PATH="coverage/zabbix_police$dbread.coverage" NAME="dbread Coverage Results" MODIFIED="1566978448286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$send_sms.coverage" NAME="send_sms Coverage Results" MODIFIED="1566890996526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$Unittests_in_test_py.coverage" NAME="Unittests in test.py Coverage Results" MODIFIED="1566558993981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zabbix_police$1.coverage" NAME="1 Coverage Results" MODIFIED="1567071316250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$police.coverage" NAME="police Coverage Results" MODIFIED="1566724160172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1566712265341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/zabbix_police$allpolice.coverage" NAME="allpolice Coverage Results" MODIFIED="1566990331392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zabbix_police$allpolice.coverage" NAME="allpolice Coverage Results" MODIFIED="1567073872830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$send_wechat.coverage" NAME="send_wechat Coverage Results" MODIFIED="1566896184563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$loggering.coverage" NAME="loggering Coverage Results" MODIFIED="1566899163449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zabbix_police$modconf.coverage" NAME="modconf Coverage Results" MODIFIED="1566988302858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -27,14 +35,46 @@
     <favorites_list name="zabbix-police" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="allpolice.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="allpolice.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/allpolice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="390">
+              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="29" />
               <folding>
-                <element signature="e#38#73#0" expanded="true" />
+                <element signature="e#38#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+              <folding>
+                <element signature="e#52#73#0" expanded="true" />
+                <element signature="e#159#1413#0" expanded="false" />
+                <element signature="e#1437#1992#0" expanded="false" />
+                <element signature="e#1507#1903#0" expanded="false" />
+                <element signature="e#2041#2693#0" expanded="false" />
+                <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+                <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+                <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+                <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/operation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="297" column="47" lean-forward="true" selection-start-line="297" selection-start-column="47" selection-end-line="297" selection-end-column="47" />
+              <folding>
+                <element signature="e#34#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +113,12 @@
       <find>actionstr</find>
       <find>actionlist</find>
       <find>hostgroupstr</find>
+      <find>send</find>
+      <find>compresslog</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -89,11 +134,12 @@
         <option value="$PROJECT_DIR$/police.py" />
         <option value="$PROJECT_DIR$/send_sms.py" />
         <option value="$PROJECT_DIR$/send_wechat.py" />
-        <option value="$PROJECT_DIR$/police.conf" />
-        <option value="$PROJECT_DIR$/allpolice.py" />
-        <option value="$PROJECT_DIR$/dbread.py" />
-        <option value="$PROJECT_DIR$/operation.py" />
         <option value="$PROJECT_DIR$/modconf.py" />
+        <option value="$PROJECT_DIR$/dbread.py" />
+        <option value="$PROJECT_DIR$/police.conf" />
+        <option value="$PROJECT_DIR$/1" />
+        <option value="$PROJECT_DIR$/allpolice.py" />
+        <option value="$PROJECT_DIR$/operation.py" />
       </list>
     </option>
   </component>
@@ -108,6 +154,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1005" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -123,8 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -188,25 +235,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="loggering" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="zabbix-police" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loggering.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="dbread" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,6 +287,25 @@
       <module name="zabbix-police" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/operation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="zabbix-police" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -431,18 +478,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test.py" />
       <item index="1" class="java.lang.String" itemvalue="Python.allpolice" />
-      <item index="2" class="java.lang.String" itemvalue="Python.loggering" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dbread" />
-      <item index="4" class="java.lang.String" itemvalue="Python.modconf" />
-      <item index="5" class="java.lang.String" itemvalue="Python.operation" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dbread" />
+      <item index="3" class="java.lang.String" itemvalue="Python.modconf" />
+      <item index="4" class="java.lang.String" itemvalue="Python.operation" />
+      <item index="5" class="java.lang.String" itemvalue="Python.1" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.allpolice" />
-        <item index="1" class="java.lang.String" itemvalue="Python.modconf" />
-        <item index="2" class="java.lang.String" itemvalue="Python.operation" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dbread" />
-        <item index="4" class="java.lang.String" itemvalue="Python.loggering" />
+        <item index="1" class="java.lang.String" itemvalue="Python.1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.modconf" />
+        <item index="3" class="java.lang.String" itemvalue="Python.operation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dbread" />
       </list>
     </recent_temporary>
   </component>
@@ -495,15 +542,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1005" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1005" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15654951" sideWeight="0.49186993" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16613418" sideWeight="0.49186993" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25301206" sideWeight="0.25239617" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.9179979" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -534,33 +581,25 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="132" />
+      <option name="time" value="153" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/allpolice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -571,7 +610,7 @@
         <state relative-caret-position="360">
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,7 +619,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
           <caret line="95" column="51" lean-forward="true" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
-          <folding />
+          <folding>
+            <element signature="e#34#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -590,12 +631,14 @@
           <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -605,7 +648,7 @@
         <state relative-caret-position="870">
           <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="43" />
           <folding>
-            <element signature="e#47#73#0" expanded="true" />
+            <element signature="e#47#73#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,7 +658,7 @@
         <state relative-caret-position="420">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -624,7 +667,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#34#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -634,12 +679,14 @@
           <caret line="75" column="26" lean-forward="true" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -650,7 +697,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -659,7 +706,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#34#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -669,12 +718,14 @@
           <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -685,7 +736,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,12 +747,14 @@
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -711,7 +764,7 @@
         <state relative-caret-position="210">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,12 +775,14 @@
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -737,7 +792,7 @@
         <state relative-caret-position="210">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,12 +803,14 @@
           <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -763,7 +820,7 @@
         <state relative-caret-position="210">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -774,12 +831,14 @@
           <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -789,7 +848,7 @@
         <state relative-caret-position="210">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,12 +859,14 @@
           <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
@@ -851,33 +912,15 @@
     <entry file="file://$PROJECT_DIR$/testa.py" />
     <entry file="file://$PROJECT_DIR$/a.py" />
     <entry file="file://$PROJECT_DIR$/send_mail.py" />
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="1624" column="0" lean-forward="false" selection-start-line="1624" selection-start-column="0" selection-end-line="1624" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loggering.py" />
     <entry file="file://$PROJECT_DIR$/axx.log" />
     <entry file="file://$PROJECT_DIR$/zabbix-police.log" />
-    <entry file="file://$PROJECT_DIR$/send_wechat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="37" />
-          <folding>
-            <element signature="e#47#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
-            <element signature="e#170#184#0" expanded="true" />
+            <element signature="e#170#184#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +944,7 @@
         <state relative-caret-position="675">
           <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding>
-            <element signature="e#56#70#0" expanded="true" />
+            <element signature="e#56#70#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -912,58 +953,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_wechat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="e#38#50#0" expanded="true" />
+            <element signature="e#47#73#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="1504" column="4" lean-forward="false" selection-start-line="1504" selection-start-column="4" selection-end-line="1504" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modconf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/police.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1" />
     <entry file="file://$PROJECT_DIR$/dbread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <marker date="1566988464000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="1655:1701" ph="SELECT * FRO... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2246" ph="SELECT media... media_type" />
-            <marker date="1566988464000" expanded="true" signature="2232:2274" ph="SELECT * FRO... alerts" />
-            <marker date="1566988464000" expanded="true" signature="2838:2932" ph="SELECT media... alerts" />
+            <element signature="e#159#1413#0" expanded="false" />
+            <element signature="e#1437#1992#0" expanded="false" />
+            <element signature="e#1507#1903#0" expanded="false" />
+            <element signature="e#2041#2693#0" expanded="false" />
+            <marker date="1567064504000" expanded="true" signature="491:532" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="720:761" ph="SELECT * FRO... alerts" />
+            <marker date="1567064504000" expanded="true" signature="1730:1776" ph="SELECT * FRO... media_type" />
+            <marker date="1567064504000" expanded="true" signature="2326:2422" ph="SELECT media... alerts" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allpolice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="390">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="29" />
           <folding>
-            <element signature="e#38#73#0" expanded="true" />
+            <element signature="e#38#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="297" column="47" lean-forward="true" selection-start-line="297" selection-start-column="47" selection-end-line="297" selection-end-column="47" />
+          <folding>
+            <element signature="e#34#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
