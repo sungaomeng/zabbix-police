@@ -97,7 +97,6 @@ def compressproblem(alarminfo):
         eventage = info[0]['eventage']
         itemvalue = info[0]['itemvalue']
 
-        infonum = len(info)
 
         # 将主机分组
         for host in info:
@@ -137,6 +136,13 @@ def compressproblem(alarminfo):
         media_type_list = mediatype()
         receiverlist = []
         receiverlisttwo = []
+
+        # 将host去重
+        hostlist = list(set(hostlist))       
+
+        # 计算告警信息条数和告警主机台数
+        infonum = len(info)
+        hostnum = len(hostlist)
 
         # 将list处理为字符串-每个值之间增加逗号方便发送显示
         hoststr = ",".join(str(i) for i in hostlist)
@@ -202,9 +208,9 @@ def compressproblem(alarminfo):
                     messageinfo = []
                 else:
                     subject = "故障%s,告警等级:%s服务器组:%s共%s台服务器发生:%s故障! %s条相同告警被压缩!" % (
-                        triggerstatus, triggerseverity, hostgroupstr, str(infonum), triggername, str(infonum))
+                        triggerstatus, triggerseverity, hostgroupstr, str(hostnum), triggername, str(infonum))
 
-                    message = "共" + str(infonum) + "条相同告警被压缩!" + "共" + str(infonum) + "台服务器故障!" \
+                    message = "共" + str(infonum) + "条相同告警被压缩!" + "共" + str(hostnum) + "台服务器故障!" \
                               "\n告警等级 : " + triggerseverity + \
                               "\n告警项目 : " + triggername + \
                               "\n监控配置 : " + triggerkey + \
@@ -243,7 +249,6 @@ def compressnormal(alarminfo):
         triggername = info[0]['triggername']
         eventage = info[0]['eventage']
 
-        infonum = len(info)
         for host in info:
             triggerkey = host['triggerkey']
             hostinfo = host['hostname']
@@ -266,6 +271,11 @@ def compressnormal(alarminfo):
         media_type_list = mediatype()
         receiverlist = []
         receiverlisttwo = []
+
+        hostlist = list(set(hostlist))
+
+        infonum = len(info)
+        hostnum = len(hostlist)
 
         hoststr = ",".join(str(i) for i in hostlist)
         hostgroupstr = ",".join(str(i) for i in list(set(hostgroup)))
@@ -299,11 +309,11 @@ def compressnormal(alarminfo):
                 messageinfo = []
 
             elif infonum > 1:
-                subject = "恢复%s, 故障持续%s,服务器组:%s共%s台服务器%s已恢复!共%s条相同恢复信息被压缩!" % (
-                    triggerstatus, eventage, hostgroupstr, str(infonum), triggername, str(infonum))
+                subject = "恢复%s, 故障持续%s,服务器组:%s共%s台服务器%s已恢复!,%s条相同恢复信息被压缩!" % (
+                    triggerstatus, eventage, hostgroupstr, str(hostnum), triggername, str(infonum))
 
                 message = "恢复" + triggerstatus + ",故障持续" + eventage + \
-                          "\n服务器组 : " + hostgroupstr + "共" + str(infonum) + "台服务器" + triggername + "已恢复!" + \
+                          "\n服务器组 : " + hostgroupstr + "共" + str(hostnum) + "台服务器" + triggername + "已恢复!" + \
                           "\n涉及服务器 : " + hoststr + \
                           "\n告警等级 : " + triggerseverity + \
                           "\n分析时间 : " + currenttime + \
